@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html ng-app="app" lang="pt-br" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Gabriel Coppini">
+
+    <title>ViajaNet - Angular</title>
+
+    <link rel="shortcut icon" href="~/favicon.ico">
+
+    @Styles.Render("~/Bundles/App/vendor/css")
+    @Styles.Render("~/Bundles/App/Main/css")
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript">
+        var ViajaNet = ViajaNet || {}; ViajaNet.appPath = '@ApplicationPath';
+    </script>
+
+    @Scripts.Render("~/Bundles/App/vendor/js")
+    @Scripts.Render("~/Bundles/App/Main/js")
+
+</head>
+<body ng-controller="app.views.layout as vm">
+    <article id="wrapper">
+        <header ng-include="'/App/Main/views/layout/header.cshtml'"></header>
+        <div id="uiView" ui-view></div>
+        <footer ng-include="'/App/Main/views/layout/footer.cshtml'"></footer>
+    </article>
+</body>
+</html>
